@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import data from "./data";
 import "./category.css"
 function Category(props) {//here
     const getInitialState = () => {

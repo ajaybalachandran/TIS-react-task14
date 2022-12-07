@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Category from "./Category";
 import Search from './Search';
-import res from "./Category"
 
 function App() {
   
@@ -24,7 +23,7 @@ function App() {
     <>
       {/* <Category onChange={getData}/> */}
       <Search a={myData}>
-        <Category onChange={getData}></Category>
+        <Category id="2" onChange={getData}/> 
       </Search>
 
     </>
