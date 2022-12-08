@@ -26,36 +26,31 @@ const Search = (props) => {
     });
     return(
         <section className="py-4 container">
-            <div className="row justify-content-center">
-              <div className="row mb-5 justify-content-evenly top">
-                <div className="col-lg-5 col-md-5 col-sm-5 col-12">
-                          <div className="row search">
-                            <div className="col-10">
-                              <input
-                                type = "text"
-                                className="form-control"
-                                placeholder="Search Here"
-                                value={filter}
-                                onChange={searchText.bind(this)}
-                              />
-                            </div>
-                            <div className="col-2">
-                              <i className="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                          </div>
+          <div className="row justify-content-center">
+            <nav className="navbar navbar-expand-lg bg-light fixed-top">
+                <div className="container-fluid col-lg-8 navigation">
+                    <div className="d-flex col-10 search rounded border border-1 border-opacity-25" role="search">
+                      <input
+                        type = "text"
+                        className="form-control"
+                        placeholder="Search Here"
+                        value={filter}
+                        onChange={searchText.bind(this)}
+                      />
+                      <span className="fa-solid fa-magnifying-glass searchspan text-muted"></span>
+                    </div>
+                    <div className="right">
+                      
+                        {props.children}
+                      
+                    </div>
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-12  ps-5  align-self-center justify-content-center">
-                  <div>
-                    {props.children}
-                  </div>
+              </nav>
+          
+            
 
-                </div>
-              </div>
-              
-              
+            
 
-
-                
                 {dataSearch.map((item, index)=>{
                   
                     return(
@@ -66,8 +61,8 @@ const Search = (props) => {
                                     <h5 className="card-title">{item.title}</h5>
                                     <div className="card-text">
                                         <p>{item.desc}</p>
-                                        <p>{item.price}</p>
-                                        <input type='submit' value='Buy Now' className="btn btn-primary"></input>
+                                        <p><i className="fa-solid fa-indian-rupee-sign me-1 text-muted"></i>{item.price}</p>
+                                        <input type='submit' value='Buy Now' className="btn btn-primary btn-sm"></input>
                                     </div>
                                     
                                 </div>

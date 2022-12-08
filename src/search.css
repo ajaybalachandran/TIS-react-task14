@@ -1,8 +1,11 @@
-.search{
+/* .search{
   border: 1px solid black;
-}
+} */
 .search input{
   border: none;
+}
+.search span{
+  background-color: #fff;
 }
 .form-control:focus {
   border-color: #fff;
@@ -12,4 +15,44 @@
   flex: 1 1 auto;
   margin-top: 5px;
   width: 16.66666667%;
+}
+
+nav{
+  margin-bottom: 24px;
+}
+.searchspan{
+  float: right;
+        margin-right: 6px;
+        margin-top: 9px;
+        position: relative;
+        z-index: 2;
+
+}
+
+.card-body{
+  object-fit: scale-down;
+}
+.rounded {
+  background-color: #fff;
+}
+@media (max-width: 668px) {
+		.search span{
+      justify-content: center;
+      align-items: center;
+      color: red ;
+    }
+    .right{
+      justify-content: center;
+      align-items: center;
+      margin-top: 8px;
+    }
+    nav{
+      align-items: center;
+      justify-content: center;
+    }
+    .navigation{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 }
