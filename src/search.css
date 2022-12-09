@@ -1,6 +1,31 @@
 /* .search{
   border: 1px solid black;
 } */
+/* .mybtn{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+} */
+.helo{
+  display: flex;
+  flex-direction: column;
+}
+.mybtn{
+  display: flex;
+  height: 100%;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column; */
+}
+button{
+  display: inline-block;
+  margin-top: auto;
+  text-align: center;
+}
+.cat_name, .price{
+  margin-bottom: 8px;
+}
 .search input{
   border: none;
 }
@@ -35,12 +60,35 @@ nav{
 .rounded {
   background-color: #fff;
 }
-@media (max-width: 668px) {
+.navigation{
+  height: 9.5vh;
+}
+#root{
+  margin-top: 20px;
+}
+@media (max-width: 716px){
+  #root{
+    margin-top: 44px;
+  }
+  .navigation{
+    height: auto;
+  
+
+  }
+
+
+
+}
+@media (max-width: 768px) {
+  .navigation{
+    height: auto;
+  }
 		.search span{
       justify-content: center;
       align-items: center;
-      color: red ;
+      
     }
+
     .right{
       justify-content: center;
       align-items: center;
@@ -55,4 +103,132 @@ nav{
       align-items: center;
       justify-content: center;
     }
+  
+}
+
+
+
+@media (max-width: 992px){
+  h5{
+    font-size: 17px;
+    margin-bottom: 2px !important;
+  }
+  .cat_name, .price{
+
+    margin-bottom: 2px;
+  }
+  img{
+    width: 160px !important;
+    object-fit: fill !important;
+    height: auto !important;
+  }
+  .mybtn{
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 768px){
+  h5{
+    font-size: 15px;
+    margin-bottom: 2px !important;
+  }
+  img{
+    width: 130px !important;
+    object-fit: fill !important;
+    height: auto !important;
+  }
+  .cat_name, .price{
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  .card-body{
+    padding: 5px 2px;
+  }
+  .btn{
+    font-size: x-small;
+  }
+  .mybtn{
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 576px){
+  img{
+    width: 120px !important;
+    object-fit: fill !important;
+    height: auto !important;
+  }
+  h5{
+    font-size: 14px;
+    margin-bottom: 1px !important;
+  }
+  
+  .cat_name, .price{
+    margin-bottom: 1px;
+    font-size: small;
+  }
+  .btn{
+    font-size: small;
+  }
+  .card-body{
+    padding: 5px 2px;
+  }
+  .search, .right{
+    font-size: small;
+  }
+  .search_input{
+    height: 30px !important;
+    
+  }
+  #root{
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+  .btn{
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 400px){
+  h5{
+    font-size: small;
+  }
+  .btn{
+    font-size: xx-small;
+  }
+  img{
+    width: 100px !important;
+    object-fit: fill !important;
+    height: auto !important;
+  }
+  h5{
+    margin-bottom: 1px !important;
+  }
+  .card-body {
+    padding-top: 0;
+  }
+  .cat_name, .price{
+    margin-bottom: 1px;
+  }
+  .search, .right{
+    font-size: small;
+  }
+  input::placeholder {
+    font-size: small;
+    
+  }
+  .search{
+    align-self: center;
+    width: 90%;
+    
+  }
+  #root{
+    margin-top: 22px;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 769px) and (min-width: 716px){
+  #root{
+    margin-top: 44px;
+    margin-bottom: 0;
+  }
 }

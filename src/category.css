@@ -1,0 +1,11 @@
+select{
+  border: 0;
+  outline: 0;
+  height: 36px;
+}
+
+@media (max-width: 576px){
+  select{
+    height: 30px;
+  }
+}

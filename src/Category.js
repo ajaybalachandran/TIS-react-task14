@@ -19,7 +19,7 @@ function Category(props) {//here
     };
     return (
         <div>
-            <select value={value} onChange={handleChange}>
+            <select value={value} onChange={handleChange} className="rounded border border-1 border-opacity-25 p-1 text-muted">
                 <option value="none">Filter</option>
                 <option value="headphone">Headphone</option>
                 <option value="mobile">Mobile</option>

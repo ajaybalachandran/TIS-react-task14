@@ -26,13 +26,13 @@ const Search = (props) => {
     });
     return(
         <section className="py-4 container">
-          <div className="row justify-content-center">
-            <nav className="navbar navbar-expand-lg bg-light fixed-top">
-                <div className="container-fluid col-lg-8 navigation">
-                    <div className="d-flex col-10 search rounded border border-1 border-opacity-25" role="search">
+          <div className="row justify-content-center no-gutters">
+            <nav className="navbar navbar-expand-lg bg-light fixed-top border border-bottom shadow-sm">
+                <div className="container-fluid col-lg-8 col-md-8 col-sm-12 col-12 navigation ">
+                    <div className="d-flex col-8 search rounded border border-1 border-opacity-25" role="search">
                       <input
                         type = "text"
-                        className="form-control"
+                        className="form-control search_input"
                         placeholder="Search Here"
                         value={filter}
                         onChange={searchText.bind(this)}
@@ -54,16 +54,30 @@ const Search = (props) => {
                 {dataSearch.map((item, index)=>{
                   
                     return(
-                        <div className="col-11 col-md-6 col-lg-3 mx-0 mb-4" key={index}>
+                        <div className="col-lg-3 col-md-4 col-sm-4 col-6 mx-0 mb-4" key={index}>
                             <div className="card p-0 overflow-hidden h-100 shadow" >
-                                <img src={item.img} className="card-img-top" alt={item.title + "image"}/>
-                                <div className="card-body" >
-                                    <h5 className="card-title">{item.title}</h5>
-                                    <div className="card-text">
-                                        <p>{item.desc}</p>
-                                        <p><i className="fa-solid fa-indian-rupee-sign me-1 text-muted"></i>{item.price}</p>
-                                        <input type='submit' value='Buy Now' className="btn btn-primary btn-sm"></input>
-                                    </div>
+                                <div className="text-center">
+                                    <img src={item.img} className="card-img-top img-fluid" alt={item.title + "image"}/>
+                                </div>
+                                <div className="card-body text-center d-flex flex-column" >
+                                    
+                                        <div className="helo">
+                                            <div>
+                                                <h5 className="card-title">{item.title}</h5>
+                                            </div>
+                                            <div>
+                                                <p className="cat_name">{item.desc}</p>
+                                                <p className="price"><i className="fa-solid fa-indian-rupee-sign me-1 text-muted"></i>{item.price}</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div className="mybtn">
+                                            <button className="btn btn-primary btn-sm ">Buy Now</button>
+                                            {/* <input type='submit' value='Buy Now' className="btn btn-primary btn-sm "></input> */}
+                                        </div>
+                                        
+                                    
                                     
                                 </div>
                             </div>
